@@ -1,0 +1,62 @@
+.container{
+    width: 100%;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 12px 32px;
+}
+header > div{
+    flex: 0.7;
+}
+
+header .titleBox{
+    display: flex;
+    align-items: center;
+}
+
+header .titleBox .pageTitle{
+    font-size: 20px;
+    font-weight: 800;
+    margin-right: 16px;
+    line-height: 40px;
+}
+header .titleBox .knowMore{
+    display: flex; 
+    align-items: center;
+    cursor: pointer;
+}
+header .searchBar{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    background-color: #f2f2f2;
+    border-radius: 6px;
+    padding: 9px 16px;
+    font-size: 15px;
+}
+header .searchBar img{
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+header .rightIcons{
+    display: flex;
+    justify-content: flex-end;
+}
+header .rightIcons .circleBG{
+    background-color: #e6e6e6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-left: 12px ;
+}
+header .rightIcons .circleBG img{
+    width: 20px;
+    height: 20px;
+}
