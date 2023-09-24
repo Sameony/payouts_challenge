@@ -1,0 +1,88 @@
+.content{
+    padding: 12px 32px;
+}
+.topSegment .overview{
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topSegment .overview .Title{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.overview #timespan{
+    padding: 0 5px;
+    font-size: 16px;
+}
+
+.topSegment .payoutDetails{
+    margin-top: 24px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+}
+.topSegment .payoutDetails>div{
+    height: 250px;
+}
+.topSegment .payoutDetails .card{
+    position: relative;
+    background-color: #146eb4;
+    border-radius: 8px;
+    color: white;
+}
+
+.topSegment .payoutDetails .cardHeader{
+    margin: 16px;
+    margin-bottom: 4px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.topSegment .payoutDetails .Desc{
+    font-size: 13px;
+}
+.topSegment .payoutDetails .Amount{
+    font-size: 32px;
+    font-weight: 800;
+}
+.topSegment .payoutDetails .card .cardContent{
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2),  rgba(255, 255, 255, 0.06));
+    height: 48px;
+    margin: 10px 16px;
+    border-radius: 6px;
+}
+.topSegment .payoutDetails .card .cardFooter{
+    background: #0E4F82;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+    padding: 16px 24px;
+    color: #f2f2f2;
+    font-size: 14px;
+}
+.card .cardFooter .footerShimmer{
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2),  rgba(255, 255, 255, 0.06));
+    height: 20px;
+    width: 64px;
+    border-radius: 4px;
+}
+.topSegment .payoutDetails .cardWrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+.topSegment .payoutDetails .cardWrap .payoutCard{
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

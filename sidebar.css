@@ -4,6 +4,8 @@
     background: #1E2640;
     height: 100vh;
     padding: 16px 10px;
+    position: sticky;
+    top: 0;
 }
 .sideHead{
     display: flex;

@@ -117,11 +117,65 @@
         </header>
         <section class="content">
             <div class="topSegment">
-                <div class="overview"></div>
+                <div class="overview">
+                    <span class="Title">Overview</span>
+                    <select name="timespan" id="timespan">
+                        <option value="Daily">Today</option>
+                        <option value="Weekly">This Week</option>
+                        <option value="Monthly">This Month</option>
+                        <option value="Yearly">This Year</option>
+                    </select>
+                </div>
                 <div class="payoutDetails">
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div class="card">
+                        <div class="cardHeader">
+                            <span class="Title">Upcoming payout</span> <br />
+                            <span class="Desc">(For eligible orders)</span>
+                        </div>
+                        <div class="cardContent"></div>
+                        <div class="cardFooter">
+                            <span>Payout Date:</span>
+                            <div class="footerShimmer"></div>
+                        </div>
+                    </div>
+                    <div class="cardWrap">
+                        <div class="payoutCard">
+                                <div>
+                                    <span class="Title">Pending payout</span> <br />
+                                    <span class="Desc">(For eligible orders)</span>
+                                </div>
+                                <div>
+                                    <span style="font-size: 24px;">₹</span><span class="Amount">0</span>
+                                </div>
+                        </div>
+                        <div class="payoutCard">
+                                <div>
+                                    <span class="Title">Refunds</span> <br />
+                                </div>
+                                <div>
+                                    <span style="font-size: 24px;">₹</span><span class="Amount">0</span>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="cardWrap">
+                        <div class="payoutCard">
+                                <div>
+                                    <span class="Title">Total payouts</span> <br />
+                                    <span class="Desc">(Upcoming + Pending + Completed - Refunds)</span>
+                                </div>
+                                <div>
+                                    <span style="font-size: 24px;">₹</span><span class="Amount">0</span>
+                                </div>
+                        </div>
+                        <div class="payoutCard">
+                                <div>
+                                    <span class="Title">Completed payouts</span> <br />
+                                </div>
+                                <div>
+                                    <span style="font-size: 24px;">₹</span><span class="Amount">0</span>
+                                </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="bottomSegment">

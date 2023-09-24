@@ -6,6 +6,7 @@ header{
     justify-content: space-around;
     width: 100%;
     padding: 12px 32px;
+    border-bottom: #dcdcdc 1px solid;
 }
 header > div{
     flex: 0.7;

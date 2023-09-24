@@ -3,6 +3,7 @@
 
 @import url(/sidebar.css);
 @import url(/header.css);
+@import url(/main.css);
 
 *{
     box-sizing: border-box;
@@ -12,6 +13,5 @@
 
 body{
     display: flex;
-    overflow: hidden;
 }
 
