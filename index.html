@@ -132,10 +132,14 @@
                             <span class="Title">Upcoming payout</span> <br />
                             <span class="Desc">(For eligible orders)</span>
                         </div>
-                        <div class="cardContent"></div>
+                        <div class="cardContent">
+                            <div class="shimmer"></div>
+                        </div>
                         <div class="cardFooter">
                             <span>Payout Date:</span>
-                            <div class="footerShimmer"></div>
+                            <div class="footerShimmer">
+                                <div class="shimmer"></div>
+                            </div>
                         </div>
                     </div>
                     <div class="cardWrap">
@@ -179,8 +183,21 @@
                 </div>
             </div>
             <div class="bottomSegment">
-                <div class="transHeader">
-    
+                <div class="transSection">
+                    <p class="transHeader">Transaction | Today</p>
+                    <div class="toggleButtons">
+                        <div class="pill active">Pending payout</div>
+                        <div class="pill">Eligible for payout</div>
+                        <div class="pill">Completed Payouts</div>
+                        <div class="pill">Refunds</div>
+                    </div>
+                    <div class="info">
+                        <img 
+                            src="data:image/png;base64,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"
+                            style="width: 20px; height: 20px; margin-right: 5px;"    
+                        >    
+                        Orders are eligible for payout only when you accept the order.
+                    </div>
                 </div>
                 <div class="transTable">
     
