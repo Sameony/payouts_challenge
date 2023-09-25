@@ -38,6 +38,10 @@
     align-items: center;
     cursor: pointer;
 }
+.sideTop .sideTable .active{
+    background-color :#494F64;
+    border-radius: 4px;
+}
 .sideTop .sideTable :hover{
     background: #353C53;
 }
