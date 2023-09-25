@@ -149,10 +149,10 @@
     box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 }
 
-.transTable .tableHeader{
+.transTable .tableNav{
     display: flex;
     justify-content: space-between;
-    margin: 12px;
+    margin: 12px 0;
 }
 .bottomSegment .transTable .searchBar{
     padding: 10px 16px;
@@ -194,4 +194,23 @@
     font-size: 16px;
     padding: 6px 12px;
     margin-right: 6px;
+}
+
+.bottomSegment .transTable .tableHeader{
+    background-color: #f2f2f2;
+    padding: 10px 12px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    color: #4d4d4d;
+}
+
+.bottomSegment .transTable .tableBody{
+    color: #4d4d4d;
+    font-size: 16px;
+    text-align: center;
+    padding: 32px;
+    font-weight: 500;
 }
