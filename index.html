@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Payouts</title>
     <link rel="stylesheet" href="/styles.css">
+    <script src="/tableData.js"></script>
 </head>
 <body>
     <div class="sidebar">
@@ -240,7 +241,7 @@
     <div class="container data-container hide">
         <header>
             <div class="titleBox">
-                <span class="pageTitle">Payouts HAHHA</span>
+                <span class="pageTitle">Payouts</span>
                 <div class="knowMore">
                     <img src="/Navbar/que_mark.png" alt="how it works" style="width: 14px; height: 14px; margin-right: 6px;">
                     <span style="font-size: 12px; line-height: 40px;">How it works</span>
@@ -273,10 +274,10 @@
                 <div class="overview">
                     <span class="Title">Overview</span>
                     <select name="timespan" id="timespan">
-                        <option value="Daily">Today</option>
-                        <option value="Weekly">This Week</option>
-                        <option value="Monthly">This Month</option>
-                        <option value="Yearly">This Year</option>
+                        <option value="Today">Today</option>
+                        <option value="This Week">This Week</option>
+                        <option value="This Month">This Month</option>
+                        <option value="This Year">This Year</option>
                     </select>
                 </div>
                 <div class="payoutDetails">
@@ -286,12 +287,12 @@
                             <span class="Desc">(For eligible orders)</span>
                         </div>
                         <div class="cardContent">
-                            <div class="shimmer"></div>
+                            <span style="font-size: 34px;">₹</span>2312.23
                         </div>
                         <div class="cardFooter">
                             <span>Payout Date:</span>
                             <div class="footerShimmer">
-                                <div class="shimmer"></div>
+                                <div class="">Today, 4:00pm</div>
                             </div>
                         </div>
                     </div>
@@ -302,7 +303,7 @@
                                     <span class="Desc">(For eligible orders)</span>
                                 </div>
                                 <div>
-                                    <span style="font-size: 24px;">₹</span><span class="Amount">0</span>
+                                    <span style="font-size: 24px;">₹</span><span class="Amount">92,312.20</span>
                                 </div>
                         </div>
                         <div class="payoutCard">
@@ -310,7 +311,7 @@
                                     <span class="Title">Refunds</span> <br />
                                 </div>
                                 <div>
-                                    <span style="font-size: 24px;">₹</span><span class="Amount">0</span>
+                                    <span style="font-size: 24px;">₹</span><span class="Amount">2,333</span>
                                 </div>
                         </div>
                     </div>
@@ -321,7 +322,7 @@
                                     <span class="Desc">(Upcoming + Pending + Completed - Refunds)</span>
                                 </div>
                                 <div>
-                                    <span style="font-size: 24px;">₹</span><span class="Amount">0</span>
+                                    <span style="font-size: 24px;">₹</span><span class="Amount">23,92,319.92</span>
                                 </div>
                         </div>
                         <div class="payoutCard">
@@ -329,7 +330,7 @@
                                     <span class="Title">Completed payouts</span> <br />
                                 </div>
                                 <div>
-                                    <span style="font-size: 24px;">₹</span><span class="Amount">0</span>
+                                    <span style="font-size: 24px;">₹</span><span class="Amount">20,92,319.92</span>
                                 </div>
                         </div>
                     </div>
@@ -383,8 +384,22 @@
                         </p>
                         <p>Order amount</p>
                     </div>
-                    <div class="tableBody">
-                        No transactions found
+                    <div class="pendingTable">
+                    </div>
+                    <div class="buttonRow">
+                        <div class="action left"><img src="/Navbar/Chevron Right.png" />Previous</div>
+                        <div>1</div>
+                        <div>...</div>
+                        <div>10</div>
+                        <div>11</div>
+                        <div>12</div>
+                        <div>13</div>
+                        <div>14</div>
+                        <div>15</div>
+                        <div>16</div>
+                        <div>17</div>
+                        <div>18</div>
+                        <div class="action right">Next<img src="/Navbar/Chevron Right.png" style="transform: rotate(180deg);" /></div>
                     </div>
                 </div>
             </div>
@@ -407,6 +422,18 @@
           dataContainer?.classList.remove("hide");
           console.log("here");
           
+          const timespanSelect = document.querySelectorAll("#timespan")
+          const transTable = document.querySelectorAll(".transTable")
+          const pendingTable = document.querySelector(".pendingTable")
+          const transHeader = document.querySelectorAll(".transHeader")
+          if(timespanSelect.length)
+          {
+              console.log("clicked")
+              timespanSelect[1]?.addEventListener("change", (e)=>{
+                  console.log(e.target.value)
+                  transHeader[1].innerHTML="Transactions | "+e.target.value
+              })
+          }
           sortBtn = document.querySelector("#sortModalopen");
           if(sortBtn)
           {
@@ -420,7 +447,39 @@
               sortModal[1]?.classList?.toggle("hide");
             });
           });
+          console.log(pendingData,"\n",transTable)
+          if(transTable)
+          {
+              const button_row = document.querySelector(".buttonRow")
+              pendingData?.map(ele=>{
+                  let div = document.createElement("div")
+                  div.classList.add("pendingRow")
+                  let p1 = document.createElement("p")
+                  p1.innerHTML=ele.order_id;
+                  let p2 = document.createElement("p")
+                  let pcircle = document.createElement("span")
+                  pcircle.classList.add("pendingCircle")
+                  p2.appendChild(pcircle)
+                  let span = document.createElement("span")
+                  span.innerHTML=ele.status
+                  p2.appendChild(span)
+                  let p3 = document.createElement("p")
+                  p3.innerHTML = ele.date;
+                  let p4 = document.createElement("p")
+                  p4.innerText = ele.amount
+                  div.appendChild(p1)
+                  div.appendChild(p2)
+                  div.appendChild(p3)
+                  div.appendChild(p4) 
+                  
+                  pendingTable?.appendChild(div)
+              })
+              console.log(button_row)
+              transTable[1]?.insertBefore(pendingTable,button_row)   
+          }
+
         })();
+            
       </script>
       
 </body>
