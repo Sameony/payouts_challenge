@@ -172,6 +172,8 @@
 }
 
 .bottomSegment .transTable .btn-sort{
+    position: relative;
+    cursor: pointer;
     background-color: white;
     color: #4d4d4d;
     font-size: 16px;
@@ -188,14 +190,32 @@
     height: 16px;
     margin-left: 6px;
 }
-.bottomSegment .transTable .btn-download{
-    background-color: white;
-    color: #4d4d4d;
-    font-size: 16px;
-    padding: 6px 12px;
-    margin-right: 6px;
-}
 
+.btn-sort .sortModal{
+    position: absolute;
+    background-color: white;
+    top: 0;
+    right: 0;
+    width: 230px;
+    height: 180px;
+    padding: 12px 8px;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+.btn-sort .sortModal>label{
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+}
+.btn-sort .sortModal label input{
+    width: 12px;
+    height: 12px;
+    margin: 2px 8px 0 8px;
+    cursor: pointer;
+}
 .bottomSegment .transTable .tableHeader{
     background-color: #f2f2f2;
     padding: 10px 12px;
