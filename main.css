@@ -165,6 +165,7 @@
     border-radius: 4px;
     border: 1px solid #e6e6e6;
     min-width: 200px;
+    display: flex;
 }
 .bottomSegment .transTable .searchBar>img{
     width: 14px;

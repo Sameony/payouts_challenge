@@ -28,3 +28,11 @@ body{
 .hide{
     display: none;
 }
+
+.searchBar>input[type=text], .searchBar>input[type=text]:focus{
+    border: none;
+    outline: none;
+    box-shadow: none;
+    width: 90%;
+    background-color: inherit;
+}
