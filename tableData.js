@@ -266,6 +266,20 @@ const RefundData =  [
       return totalB - totalA;
     });
   }
+  const sortByOrderAscending = (data)=> {
+    return data.sort((a, b) => {
+      const totalA = parseFloat(a.order_id.replace("#", ""));
+      const totalB = parseFloat(b.order_id.replace("#", ""));
+      return totalA - totalB;
+    });
+  }
+  const sortByOrderDescending = (data)=> {
+    return data.sort((a, b) => {
+      const totalA = parseFloat(a.order_id.replace("#", ""));
+      const totalB = parseFloat(b.order_id.replace("#", ""));
+      return totalB - totalA;
+    });
+  }
 
   const sortByDateDescending = (data)=> {
     return data.sort((a, b) => {
@@ -293,24 +307,24 @@ const RefundData =  [
   ]
 
 const EligibleSortModal = [
-    { labelText: "Order Date(Newest first)", inputId: "dateDsc", checked:true },
-    { labelText: "Order Date(Oldest first)", inputId: "dateAsc", checked:false },
-    { labelText: "Order Amount(High to Low)", inputId: "amtDsc", checked:false },
-    { labelText: "Order Amount(Low to High)", inputId: "amtAsc", checked:false },
-    { labelText: "Total (High to Low)", inputId: "totalDsc", checked:false },
-    { labelText: "Total (Low to High)", inputId: "totalAsc", checked:false },
+    { labelText: "Order Date(Newest first)", inputId: "dateDsc", checked:true, sort: sortByDateDescending },
+    { labelText: "Order Date(Oldest first)", inputId: "dateAsc", checked:false, sort: sortByDateAscending  },
+    { labelText: "Order Amount(High to Low)", inputId: "amtDsc", checked:false, sort:sortByAmountDescending  },
+    { labelText: "Order Amount(Low to High)", inputId: "amtAsc", checked:false, sort:sortByAmountAscending },
+    { labelText: "Total (High to Low)", inputId: "totalDsc", checked:false, sort:sortByTotalDescending },
+    { labelText: "Total (Low to High)", inputId: "totalAsc", checked:false, sort:sortByTotalAscending},
   ]
 
   const PendingSortModal = [
-    { labelText: "Order Date(Newest first)", inputId: "dateDsc", checked:true },
-    { labelText: "Order Date(Oldest first)", inputId: "dateAsc", checked:false },
-    { labelText: "Order Amount(High to Low)", inputId: "amtDsc", checked:false },
-    { labelText: "Order Amount(Low to High)", inputId: "amtAsc", checked:false },
+    { labelText: "Order Date(Newest first)", inputId: "dateDsc", checked:true, sort: sortByDateDescending },
+    { labelText: "Order Date(Oldest first)", inputId: "dateAsc", checked:false, sort: sortByDateAscending  },
+    { labelText: "Order Amount(High to Low)", inputId: "amtDsc", checked:false, sort:sortByAmountDescending  },
+    { labelText: "Order Amount(Low to High)", inputId: "amtAsc", checked:false, sort:sortByAmountAscending },
   ]
   const RefundSortModal = [
-    { labelText: "Refund Date(Newest first)", inputId: "dateDsc", checked:true },
-    { labelText: "Refund Date(Oldest first)", inputId: "dateAsc", checked:false },
-    { labelText: "Order Amount(High to Low)", inputId: "amtDsc", checked:false },
-    { labelText: "Order Amount(Low to High)", inputId: "amtAsc", checked:false },
+    { labelText: "Refund Date(Newest first)", inputId: "dateDsc", checked:true, sort: sortByDateDescending },
+    { labelText: "Refund Date(Oldest first)", inputId: "dateAsc", checked:false, sort: sortByDateAscending  },
+    { labelText: "Order Amount(High to Low)", inputId: "amtDsc", checked:false, sort:sortByAmountDescending  },
+    { labelText: "Order Amount(Low to High)", inputId: "amtAsc", checked:false, sort:sortByAmountAscending },
   ]
  
