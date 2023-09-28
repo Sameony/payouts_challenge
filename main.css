@@ -199,7 +199,7 @@
     top: 0;
     right: 0;
     width: 230px;
-    height: 180px;
+    /* height: 180px; */
     padding: 12px 8px;
     border-radius: 6px;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
