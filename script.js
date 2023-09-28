@@ -280,6 +280,7 @@
                             input.checked= checked;
                             input.id = inputId;
                             input.name = "sort_type"; 
+                            input.addEventListener("click",()=>sortModal?.classList?.toggle("hide"))
                             
                             label.appendChild(document.createTextNode(labelText));
                             label.insertBefore(input, label.firstChild);
@@ -335,7 +336,7 @@
                             input.checked= checked;
                             input.id = inputId;
                             input.name = "sort_type"; // Set the common name attribute for radio buttons
-                          
+                            input.addEventListener("click",()=>sortModal?.classList?.toggle("hide"))
                             
                             label.appendChild(document.createTextNode(labelText));
                             label.insertBefore(input, label.firstChild);
@@ -399,7 +400,8 @@
                             input.checked= checked;
                             input.id = inputId;
                             input.name = "sort_type"; // Set the common name attribute for radio buttons
-                          
+                            input.addEventListener("click",()=>sortModal?.classList?.toggle("hide"))
+                            
                             label.appendChild(document.createTextNode(labelText));
                             label.insertBefore(input, label.firstChild);
                             label.addEventListener("click",()=>
