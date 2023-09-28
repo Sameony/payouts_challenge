@@ -225,7 +225,7 @@
                             
                             input.id = inputId;
                             input.name = "sort_type"; // Set the common name attribute for radio buttons
-                          
+                            input.addEventListener("click",()=>sortModal?.classList?.toggle("hide"))
                             
                             label.appendChild(document.createTextNode(labelText));
                             label.insertBefore(input, label.firstChild);
@@ -421,7 +421,7 @@
         pills[4].click();
     }
     if (timespanSelect.length) {
-        console.log("clicked")
+        // console.log("clicked")
         timespanSelect[1]?.addEventListener("change", (e) => {
             console.log(e.target.value)
             transHeader[1].innerHTML = "Transactions | " + e.target.value
@@ -430,7 +430,7 @@
 
     if (sortBtn) {
         sortBtn.addEventListener("click", (e) => {
-            e.stopPropagation();
+            // e.stopPropagation();
             sortModal?.classList?.toggle("hide");
         });
     }
