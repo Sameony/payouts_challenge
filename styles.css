@@ -20,7 +20,39 @@ body{
     height: 10px;
     border-radius: 50%;
     background-color: #fab73b;
-    margin-right: 6px;
+    margin:2px 6px 0 0;
+}
+.blueCircle{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #146eb4;
+    margin:2px 6px 0 0;
+}
+.greenCircle{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #17b31b;
+    margin:2px 6px 0 0;
+}
+.orangeCircle{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ee741f;
+    margin:2px 6px 0 0;
+}
+.grayCircle{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #999999;
+    margin:2px 6px 0 0;
 }
 .flex{
     display: flex;

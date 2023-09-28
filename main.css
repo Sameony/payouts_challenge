@@ -242,7 +242,7 @@
     color: #4d4d4d;
 }
 
-.bottomSegment .transTable .pendingRow{
+.bottomSegment .transTable .pendingRow, .bottomSegment .transTable .eligibleRow{
     display: flex;
     padding: 14px 12px;
     justify-content: space-between;
@@ -264,11 +264,24 @@
     min-width: 75px;
     color: #146eb4;
 }
-.bottomSegment .transTable .pendingRow>p:nth-child(4){
+.bottomSegment .transTable .pendingRow>p:nth-last-child(1){
     justify-content: flex-end;
     
 }
-
+.bottomSegment .transTable .eligibleRow > p{
+    display: flex;
+    align-items: center;
+    display: flex;
+    justify-content: start;
+}
+.bottomSegment .transTable .eligibleRow>p:nth-child(1){
+    width: 75px;
+    color: #146eb4;
+}
+.bottomSegment .transTable .eligibleRow>p:nth-last-child(1){
+    justify-content: flex-end;
+    
+}
 .bottomSegment .buttonRow{
     display: flex;
     justify-content: space-between;

@@ -340,10 +340,10 @@
                 <div class="transSection">
                     <p class="transHeader">Transactions | Today</p>
                     <div class="toggleButtons">
-                        <div class="pill active">Pending payout (23)</div>
-                        <div class="pill">Eligible for payout (4)</div>
-                        <div class="pill">Completed Payouts (17)</div>
-                        <div class="pill">Refunds (0)</div>
+                        <div class="pill active">Pending payout </div>
+                        <div class="pill">Eligible for payout </div>
+                        <div class="pill">Completed Payouts </div>
+                        <div class="pill">Refunds </div>
                     </div>
                     <div class="info">
                         <img 
@@ -372,18 +372,7 @@
                             <div class="btn-sort"><img src="/Navbar/download.png" style="height: 20px; width: 20px; margin-left: 0;"></div>
                         </div>
                     </div>
-                    <div class="tableHeader">
-                        <p>Order ID</p>
-                        <p>Order status</p>
-                        <p>Order date 
-                            <img 
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAACQklEQVR4nO3ZO4gTcRAG8PGFL9BCwUehgtj4wOLAQoQVJLjsfN/uplgLG0EhV2iliAhK7AQLQWwsLAUbQQsLsRQLxavURhBOGwUtNKKo53lK8K5yjZdkH//dzA+mTJhvZrPJ/iNijDHGGGOMMaMuCILNqjpW5wKwKTU8ybMkZ0j+qnl1M55KG0DHgeaKqvdpA3jmQGNF1cRfA1DVMZKfHWgu1wLwSVV3p94HVDUAMF3j8NMA2PObAMB4jQdwvGf4OSSvlN1sDnVJ5qvdbi8keduBprOqW91M0o8kSZYDeORA80MVgCeNRmOlDKLZbG4g+arC4SdJrpNhhGG4HcCHssMMUB1V3SlZUNX9AL5XaPNTAA5IlsIwPFp2sD5+6x+RPJC86EDA/9UFydECkjccvvRvdnvMcwDied4yAA/LDptSD3zfXypFiON4DckXDm3+JYC1hYSfE8fxVpLvXHi2V9VtUgYA+0h+KzH81yiK9kqZSB4q6ShtBsBhcQGAcyV87k+LS0heKzD8dXFNq9VaAuB+AQO453neYnGR7/urADzNcfPPkyRZLS6LomgLybc5hH/zzz81XKPZnzB/UdU9UiVhGGoWJ8yz7xFJFQE4mcH2T0iVAbg6RPjLUnVJkiwCcGeAS/9u97VSBwBWkHzcxwAmBj7JdVXzzwnz63lsfjIIgvVSRyR3APjYYwCdKIp2SZ2p6kGSP1I2P0WyIaOA5LGUAYzLKCF5fvaZ/ifJMzKKwjDcWNsbnjHGGGOMMcaIw34DBN9H18zA6n0AAAAASUVORK5CYII="
-                            alt="down icon"
-                            style="width: 8px; height: 8px;"
-                            >
-                        </p>
-                        <p>Order amount</p>
-                    </div>
+                   
                     <div class="pendingTable">
                     </div>
                     <div class="buttonRow">
@@ -407,80 +396,7 @@
     </div>
 
 
-    <script>
-        (async () => {
-          const sleep = async (delay) => new Promise((resolve) => setTimeout(resolve, delay));
-          const radios = document.getElementsByName("sort_type");
-          let sortBtn;
-          const sortModal = document.querySelectorAll(".sortModal");
-          let shimmerContainer = document.querySelector(".shimmer-container");
-          let dataContainer = document.querySelector(".data-container");
-          
-          await sleep(3000);
-          
-          shimmerContainer?.classList.add("hide");
-          dataContainer?.classList.remove("hide");
-          console.log("here");
-          
-          const timespanSelect = document.querySelectorAll("#timespan")
-          const transTable = document.querySelectorAll(".transTable")
-          const pendingTable = document.querySelector(".pendingTable")
-          const transHeader = document.querySelectorAll(".transHeader")
-          if(timespanSelect.length)
-          {
-              console.log("clicked")
-              timespanSelect[1]?.addEventListener("change", (e)=>{
-                  console.log(e.target.value)
-                  transHeader[1].innerHTML="Transactions | "+e.target.value
-              })
-          }
-          sortBtn = document.querySelector("#sortModalopen");
-          if(sortBtn)
-          {
-            sortBtn.addEventListener("click", (e) => {
-                e.stopPropagation();
-                sortModal[1]?.classList?.toggle("hide");
-            });
-          }
-          radios.forEach((ele) => {
-            ele.addEventListener("click", () => {
-              sortModal[1]?.classList?.toggle("hide");
-            });
-          });
-          console.log(pendingData,"\n",transTable)
-          if(transTable)
-          {
-              const button_row = document.querySelector(".buttonRow")
-              pendingData?.map(ele=>{
-                  let div = document.createElement("div")
-                  div.classList.add("pendingRow")
-                  let p1 = document.createElement("p")
-                  p1.innerHTML=ele.order_id;
-                  let p2 = document.createElement("p")
-                  let pcircle = document.createElement("span")
-                  pcircle.classList.add("pendingCircle")
-                  p2.appendChild(pcircle)
-                  let span = document.createElement("span")
-                  span.innerHTML=ele.status
-                  p2.appendChild(span)
-                  let p3 = document.createElement("p")
-                  p3.innerHTML = ele.date;
-                  let p4 = document.createElement("p")
-                  p4.innerText = ele.amount
-                  div.appendChild(p1)
-                  div.appendChild(p2)
-                  div.appendChild(p3)
-                  div.appendChild(p4) 
-                  
-                  pendingTable?.appendChild(div)
-              })
-              console.log(button_row)
-              transTable[1]?.insertBefore(pendingTable,button_row)   
-          }
-
-        })();
-            
-      </script>
+<script src="/script.js"></script>
       
 </body>
 </html>
